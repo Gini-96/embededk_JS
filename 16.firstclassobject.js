@@ -11,6 +11,8 @@ const main = function(f1, f2) {
     f1();
     f2();
 }
+// main = 고차함수
+// f1, f2 = 콜백함수
 
 main(func, func); // hello hello
 
