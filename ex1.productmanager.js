@@ -61,12 +61,13 @@ prodm.createProduct(21,22,23,24,25);
 prodm.listProduct();
 console.log('');
 
-prodm.mofifyProduct(1,'집','아들','SON',3,'Free');
+prodm.mofifyProduct(1,'집','아들',3,'Free');
 prodm.listProduct();
 console.log('');
 
 prodm.deleteProduct(11);
 prodm.listProduct();
+console.log('');
 
 
 // 맵으로 바꿔서 해보기
@@ -90,13 +91,11 @@ function ManageProductMap() {
             +', 상품가격: '+productMap.get(ele).price
         );
     },
-    this.mofifyProduct = function(product) {
-        productMap.set(product.num, product)
+    this.mofifyProduct = function(num, company, name, sum, price) {
+        productMap.set(num, {company: company, name: name, sum: sum, price: price})
     },
     this.deleteProduct = function(num) {
-        productArr = productArr.filter(
-            product => { return product.num!=num; }
-        );
+        productMap.delete(num);
     }
 }
 
@@ -106,5 +105,14 @@ prodmm.createProduct(1,2,3,4,5);
 prodmm.createProduct(11,12,13,14,15);
 prodmm.createProduct(21,22,23,24,25);
 prodmm.listProduct();
+console.log('');
 
-// mo
+// modify
+prodmm.mofifyProduct(1,'집','아들',3,'Free');
+prodmm.listProduct();
+console.log('');
+
+// delete
+prodmm.deleteProduct(11);
+prodmm.listProduct();
+console.log('');
