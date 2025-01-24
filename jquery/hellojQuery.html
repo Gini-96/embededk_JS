@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hellojQuery</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        // jQuery
+        $(function() {
+            $('#btn').click(() => {
+                alert('jQuery로 작성된 이벤트');
+            });
+        });
+
+        // Javascript
+        // window.onload = function() {
+        //     const btn = document.querySelector('#btn');
+        //     btn.addEventListener('click', e => {
+        //         alert('jQuery로 작성된 이벤트');
+        //     })
+        // }
+    </script>
+</head>
+<body>
+    <p>
+        <button id="btn">클릭</button>
+    </p>
+</body>
+</html>

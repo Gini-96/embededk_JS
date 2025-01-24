@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>manipulation</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(function() {
+            console.log($('p').text()); // textContent
+            console.log($('p').html()); // innerHTML
+            console.log($('a').attr('href'));
+            console.log($('a').attr('href','http://www.naver.com'));
+            $('a').append('append');
+            $('a').prepend('prepend');
+            $('a').after('after');
+            $('a').before('before');
+            $('button').click(e => {
+                console.log($('#txt').val());
+                $('a').remove();
+            });
+        });
+    </script>
+</head>
+<body>
+    <p>
+        <a href="http://www.google.com">구글로 이동</a><br>
+        <input id="txt" type="text">&nbsp;
+        <button>클릭</button>
+    </p>
+</body>
+</html>
